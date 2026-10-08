@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 7 · ① 헤더 — CSS</title>
+  <style>
+    /*
+    9주차 예제 7 — ① 헤더 — CSS
+    */
+    .nav {
+      display: flex;
+      justify-content: space-between;  /* 양끝으로 */
+      align-items: center;             /* 세로 가운데 */
+      padding: 0 20px;
+      height: 60px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;   /* ⚠ 점(•) 없애기 */
+      padding: 0;         /* ⚠ ul의 기본 왼쪽 여백 없애기 */
+      margin: 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #4b5563;
+    }
+    .menu a:hover { color: #4338ca; }
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

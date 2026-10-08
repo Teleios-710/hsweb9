@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 5 · ⚠ 기본값 nowrap의 함정</title>
+  <style>
+    /*
+    9주차 예제 5 — ⚠ 기본값 nowrap의 함정
+    */
+    /* ❌ 좁은 화면에서 카드가 찌그러진다 */
+    .cards { display: flex; gap: 16px; }
+
+    /* ✅ 넘치면 다음 줄로 내려간다 */
+    .cards { display: flex; flex-wrap: wrap; gap: 16px; }
+    .cards > * { flex: 1 1 220px; }   /* 220px 아래로는 안 줄어들고 줄바꿈 */
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

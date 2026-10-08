@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 23 · 좌우 여백을 섹션마다 하드코딩하지 않기</title>
+  <style>
+    /*
+    9주차 예제 23 — 좌우 여백을 섹션마다 하드코딩하지 않기
+    */
+    :root {
+      --pad: 20px;
+    }
+    @media (min-width: 640px)  { :root { --pad: 28px; } }
+    @media (min-width: 1024px) { :root { --pad: 40px; } }
+
+    .inner {
+      max-width: calc(1200px + 2 * var(--pad));   /* 내용 폭 + 좌우 패딩 */
+      padding: 0 var(--pad);
+      margin: 0 auto;
+    }
+
+    /* ⚠ max-width에 패딩을 포함시키지 마세요.
+       box-sizing: border-box 이면 패딩이 바뀔 때 내용 폭까지 흔들립니다. */
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

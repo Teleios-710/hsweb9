@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 24 · 정의하고 꺼내 쓰기</title>
+  <style>
+    /*
+    9주차 예제 24 — 정의하고 꺼내 쓰기
+    */
+    :root {                     /* 문서 전체에서 쓸 변수는 :root에 */
+      --main: #4338ca;
+      --main-dark: #312e81;
+      --text: #111827;
+      --bg: #ffffff;
+      --radius: 12px;
+      --pad: 20px;
+    }
+
+    h1     { color: var(--main); }
+    button { background: var(--main); border-radius: var(--radius); }
+    .card  { padding: var(--pad); background: var(--bg); }
+
+    /* 이제 --main 한 줄만 바꾸면 사이트 전체 색이 바뀝니다. */
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

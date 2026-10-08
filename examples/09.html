@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 9 · ③ 푸터를 화면 아래에 붙이기 (내용이 짧아도)</title>
+  <style>
+    /*
+    9주차 예제 9 — ③ 푸터를 화면 아래에 붙이기 (내용이 짧아도)
+    */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;    /* 화면 높이만큼 최소 확보 */
+      margin: 0;
+    }
+    main { flex: 1; }       /* 본문이 남는 공간을 다 차지 → 푸터가 아래로 */
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

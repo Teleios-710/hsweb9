@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 14 · span과 grid-template-areas</title>
+  <style>
+    /*
+    9주차 예제 14 — span과 grid-template-areas
+    */
+    /* 칸 합치기 */
+    .wide { grid-column: span 2; }    /* 가로 2칸 차지 */
+    .tall { grid-row: span 2; }       /* 세로 2칸 차지 */
+
+    /* 영역에 이름 붙이기 — 페이지 뼈대에 아주 편합니다 */
+    .layout {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-areas:
+        "header header"
+        "side   main"
+        "footer footer";
+      gap: 16px;
+    }
+    .layout > header { grid-area: header; }
+    .layout > aside  { grid-area: side; }
+    .layout > main   { grid-area: main; }
+    .layout > footer { grid-area: footer; }
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 실습 6</title>
+  <style>
+    /*
+    실습 6 · 심화
+
+    문제: 아래 CSS는 모바일에서 안 접힙니다. 원인을 찾아 고치세요. (규칙은 지우지 말고 순서만 바로잡으세요.)
+    힌트: 미디어쿼리에는 우선권이 없습니다. 특정도가 같으면 나중에 온 것이 이깁니다.
+    꼭 들어가야 하는 것: display: grid|display:grid  repeat  @media  max-width
+    */
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

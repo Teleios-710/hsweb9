@@ -1,0 +1,12 @@
+/*
+9주차 예제 11 — fr은 "fraction(조각)"입니다
+*/
+
+/* ⚠ 이 파일은 **속성 참고**입니다. 이대로는 화면에 아무 일도 일어나지 않습니다.
+   아래 선언을 선택자 안에 넣어야 적용됩니다 —  .box { padding: 20px; }
+   여러 줄이 같은 속성을 반복한다면 "이렇게도 쓸 수 있다" 는 뜻입니다. */
+
+grid-template-columns: 1fr 1fr 1fr;        /* 균등 3등분 */
+grid-template-columns: repeat(3, 1fr);     /* 위와 같음 — repeat로 줄여 쓰기 */
+grid-template-columns: 2fr 1fr;            /* 2:1 비율 */
+grid-template-columns: 200px 1fr;          /* 왼쪽 고정, 오른쪽 나머지 전부 */

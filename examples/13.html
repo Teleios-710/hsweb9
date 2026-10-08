@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 13 · 미디어쿼리 없는 반응형 격자</title>
+  <style>
+    /*
+    9주차 예제 13 — 미디어쿼리 없는 반응형 격자
+    */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    /* 읽는 법: "240px보다 작아지지 않는 칸을, 들어가는 만큼 만들어라"
+       → 화면이 1000px이면 4열, 600px이면 2열, 300px이면 1열.
+       브레이크포인트를 하나도 안 썼는데 반응형입니다. */
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

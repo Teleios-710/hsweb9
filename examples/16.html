@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 16 · 화면 조건에 따라 다른 규칙</title>
+  <style>
+    /*
+    9주차 예제 16 — 화면 조건에 따라 다른 규칙
+    */
+    /* 기본(모든 화면) */
+    .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    /* 화면이 768px 이하일 때만 */
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* 범위로도 쓸 수 있습니다 */
+    @media (min-width: 769px) and (max-width: 1024px) { }
+
+    /* 인쇄할 때 */
+    @media print {
+      .navbar, .footer { display: none; }
+    }
+
+    /* 기기의 다크모드 설정 */
+    @media (prefers-color-scheme: dark) { }
+
+    /* 움직임을 줄여 달라는 설정 (멀미·발작 위험이 있는 사용자) */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>

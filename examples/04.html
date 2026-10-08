@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9주차 예제 4 · flex item 속성</title>
+  <style>
+    /*
+    9주차 예제 4 — flex item 속성
+    */
+    .item {
+      flex-grow: 1;      /* 남는 공간을 나눠 가진다 (0 = 안 늘어남) */
+      flex-shrink: 1;    /* 공간이 모자라면 줄어든다 (0 = 안 줄어듦) */
+      flex-basis: 220px; /* 기본 크기 */
+
+      flex: 1 1 220px;   /* 위 셋을 한 줄로 (grow shrink basis) */
+      flex: 1;           /* = flex: 1 1 0  — "균등하게 나눠 가져라" */
+
+      align-self: flex-end;  /* 이 요소만 교차축 정렬을 다르게 */
+      order: 2;              /* 순서 바꾸기 (HTML은 그대로) */
+    }
+  </style>
+</head>
+<body>
+  <h1>제목 h1</h1>
+  <p class="intro">문단 p — 위에 작성한 CSS가 이 견본 문서에 적용됩니다.</p>
+  <ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+  </ul>
+  <div class="box">div.box</div>
+  <button>버튼</button>
+</body>
+</html>
